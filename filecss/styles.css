@@ -6,14 +6,14 @@
     height: 300px;
     overflow: hidden;
 }
-.slider-container{
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-display: flex;
-transition: transform 0.5s ease-in-out;
+.slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% * 13); /* 13 slides */
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 .slide{
      min-width: 100%;
