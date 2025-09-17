@@ -1,13 +1,17 @@
-// slider
-const SliderContainer = document.querySelector('.slider-container');
-const Slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+// Sélectionne tous les sliders
+const sliders = document.querySelectorAll('.slider');
 
-if (SliderContainer && Slides.length > 0) {
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % Slides.length;
-    SliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-  }, 5000);
-} else {
-  console.error("Les images ne sont pas disponibles");
-}
+sliders.forEach(slider => {
+  const sliderContainer = slider.querySelector('.slider-container');
+  const slides = slider.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  if (sliderContainer && slides.length > 0) {
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }, 5000);
+  } else {
+    console.error("Les images ne sont pas disponibles dans ce slider");
+  }
+});
