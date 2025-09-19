@@ -1,5 +1,6 @@
 // Sélectionne tous les sliders
-const sliders = document.querySelectorAll('.slider');
+document.addEventListener("DOMContentLoaded",()=>{
+  const sliders = document.querySelectorAll('.slider');
 
 sliders.forEach(slider => {
   const sliderContainer = slider.querySelector('.slider-container');
@@ -15,3 +16,5 @@ sliders.forEach(slider => {
     console.error("Les images ne sont pas disponibles dans ce slider");
   }
 });
+
+})
